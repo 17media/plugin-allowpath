@@ -1,0 +1,8 @@
+displayName: Allow Path
+summary: Only allow HTTP requests with a path matching the configured regex.
+type: middleware
+import: github.com/17media/plugin-allowpath
+compatibility: TODO
+testData:
+  Regex:
+    - "^/foo(.*)"
