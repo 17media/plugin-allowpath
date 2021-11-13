@@ -10,7 +10,7 @@ command:
 ```
 
 ```middleware.yaml
-# Allow path starting with /foo only
+# Allow path prefix with /foo and exact match with /bar only
 apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
@@ -18,5 +18,7 @@ metadata:
 spec:
   plugin:
     allowpath:
-      regex: ["^/foo(.*)"]
+      regex:
+      - ^/foo(.*)
+      - ^/bar$
 ```
